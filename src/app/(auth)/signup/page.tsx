@@ -2,16 +2,10 @@
 
 import NextLink from "next/link";
 import { useRouter } from "next/navigation";
-
 import { Input, Button, Link } from "@nextui-org/react";
-
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
 import { signUpSchema, signUpSchemaType } from "@/lib/validation/signUpSchema";
-
-import axios from "axios";
-import toast from "react-hot-toast";
 
 const Page = () => {
   const router = useRouter();
@@ -27,17 +21,12 @@ const Page = () => {
 
   const onSubmitHandle: SubmitHandler<signUpSchemaType> = async (data) => {
     try {
-      const res = await axios.post(`/api/auth/signup`, data);
-      toast.success(res.data.message);
+    
       reset();
 
       router.push("/");
     } catch (error: any) {
-      if (error.response) {
-        toast.error(error.response.data.message);
-      } else {
-        toast.error(error.message);
-      }
+      
       console.log(error);
     }
   };

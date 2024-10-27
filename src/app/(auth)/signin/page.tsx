@@ -12,9 +12,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { SignInSchemaType, signInSchema } from "@/lib/validation/signInSchema";
 
-import axios from "axios";
-
-import toast from "react-hot-toast";
 
 const Page = () => {
   const router = useRouter();
@@ -28,18 +25,12 @@ const Page = () => {
 
   const onSubmitHandle: SubmitHandler<SignInSchemaType> = async (data) => {
     try {
-      const res = await axios.post("/api/auth/login", data);
-
-      toast.success(res.data.message);
+     
       reset();
 
       router.push("/");
     } catch (error: any) {
-      if (error.response) {
-        toast.error(error.response.data.message);
-      } else {
-        toast.error(error.message);
-      }
+      
       console.log(error);
     }
   };

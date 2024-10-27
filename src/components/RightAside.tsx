@@ -32,7 +32,7 @@ const RightAside = () => {
         <div>
           <Card shadow="none" radius="sm" className="border">
             <CardHeader className="text-2xl font-bold">
-              TEN Community is a community of amazing developers
+             Blog-sphere Community is a community of amazing developers
             </CardHeader>
             <CardBody>
               We&apos;re a place where coders share, stay up-to-date and grow
@@ -108,14 +108,14 @@ const RightAside = () => {
 
       <Card shadow="none" className="pt-4">
         <CardHeader>
-          TEN blog A constructive and inclusive social network for software
+        Blog-sphere blog A constructive and inclusive social network for software
           developers. With you every step of your journey.
         </CardHeader>
         <CardBody>
           Built using Nextjs, typescript, prisma, mongoDB, tailwindCSS, NextUI
           and editorjs .
         </CardBody>
-        <CardFooter>Made with love and Nextjs. TEN blog © 2023.</CardFooter>
+        <CardFooter>Made with love and Nextjs. Blog-sphere blog © 2023.</CardFooter>
       </Card>
     </aside>
   );

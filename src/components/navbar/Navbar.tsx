@@ -59,7 +59,7 @@ const Navbar = () => {
               radius="sm"
               className=" bg-black/90 text-white"
             >
-              TEN
+              B/s
             </Button>
           </NavbarBrand>
           {/* ---SEARCH BAR--- */}
